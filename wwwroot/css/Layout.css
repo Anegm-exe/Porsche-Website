@@ -1,4 +1,5 @@
 ﻿body {
+    z-index: -1;
 }
 
 .home-header {
