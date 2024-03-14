@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR-GO", "CAR-GO.csproj", "{BB7B320C-9889-45FF-84F4-1ACDB9134217}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Porsche_Website", "Porsche_Website.csproj", "{BB7B320C-9889-45FF-84F4-1ACDB9134217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

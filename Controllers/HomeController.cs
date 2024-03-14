@@ -1,8 +1,8 @@
-using CAR_GO.Models;
+using Porsche_Website.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace CAR_GO.Controllers
+namespace Porsche_Website.Controllers
 {
     public class HomeController : Controller
     {

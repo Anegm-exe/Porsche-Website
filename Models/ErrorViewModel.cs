@@ -1,4 +1,4 @@
-namespace CAR_GO.Models
+namespace Porsche_Website.Models
 {
     public class ErrorViewModel
     {

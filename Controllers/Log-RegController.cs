@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CAR_GO.Controllers
+namespace Porsche_Website.Controllers
 {
     public class Log_RegController : Controller
     {
