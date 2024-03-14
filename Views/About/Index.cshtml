@@ -2,17 +2,64 @@
     ViewData["Title"] = "About - Porsche";
 }
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>About Porsche</title>
     <link rel="stylesheet" href="~/css/About.css" asp-append-version="true" />
 </head>
+<body>
 
-<div class="container">
-    <div class="text-content">
-        Welcome to the heritage of Porsche, where every car is a masterpiece of engineering and design.
+    <div id="aboutPage" class="about-page">
+        <div class="section" id="section1">
+            <h1>About Porsche :P</h1>
+        </div>
+        <div class="image-container" id="image1">
+            <img src="~/images/porsche1.png" alt="First Image" class="active">
+        </div>
+        <div class="section" id="section2">
+            <p>Welcome to Porsche</p>
+        </div>
+        <div class="section" id="section3">
+            <p>Where the Germans</p>
+        </div>
+        <div class="image-container" id="image2">
+            <img src="~/images/porsche2.png" alt="Second Image">
+        </div>
+        <div class="section" id="section4">
+            <p>Decided to build a monster</p>
+        </div>
+        <div class="section" id="section5">
+            <p>That kills any other German car.</p>
+        </div>
+        <div class="image-container" id="image2">
+            <img src="~/images/porsche3.png" alt="Second Image">
+        </div>
+        <div class="section" id="section6">
+            <p>Of course the legend, Type 356, was the first Porsche made in 1948.</p>
+        </div>
+        <div class="section" id="section7">
+            <p>With that the legendary cars of Porsche were introduced to our world,</p>
+        </div>
+        <div class="image-container" id="image2">
+            <img src="~/images/porsche4.png" alt="Second Image">
+        </div>
+        <div class="section" id="section8">
+            <p>which became a better place :D</p>
+        </div>
+        <div class="image-container" id="image2">
+            <img src="~/images/porsche5.png" alt="Second Image">
+        </div>
+        <!-- Continue adding sections for additional images if necessary -->
     </div>
-    <div class="image-content">
-        <img id="dynamicImage" src="~images/porsche 19.jpg" alt="Porsche">
-    </div>
-</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script src="~/js/About.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
+

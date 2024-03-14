@@ -1,13 +1,44 @@
-﻿.container {
+﻿.about-page {
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: relative; /* Set a stacking context for z-index */
+}
+
+.section {
+    height: 100vh; /* Full height of the viewport */
     display: flex;
-    justify-content: space-between;
+    align-items: center; /* This will center the text vertically */
+    justify-content: center; /* This will center the text horizontally */
+    z-index: 1000; /* Text sections will be on top */
+    position: relative;
 }
 
-.text-content, .image-content {
-    width: 50%;
-}
-
-.image-content {
-    position: sticky;
+.image-container {
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100vw; /* Set the width to viewport width */
+    height: 100vh; /* Set the height to viewport height */
+    z-index: 999; /* Behind the text */
+    overflow: hidden; /* Ensure no overflow from the image */
 }
+
+.image-container img {
+    position: absolute;
+    min-width: 100%; /* Minimum width is full viewport width */
+    min-height: 100%; /* Minimum height is full viewport height */
+    width: auto; /* Auto width to maintain aspect ratio */
+    height: auto; /* Auto height to maintain aspect ratio */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Align center of the image with viewport center */
+    transition: opacity 1s ease-in-out;
+    opacity: 0; /* Start images as invisible */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.image-container img.active {
+    opacity: 1; /* Active image is visible */
+}
+
