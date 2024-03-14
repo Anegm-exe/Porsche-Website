@@ -1,3 +1,13 @@
-﻿body {
-    background-color: black;
+﻿.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-content, .image-content {
+    width: 50%;
+}
+
+.image-content {
+    position: sticky;
+    top: 0;
 }
