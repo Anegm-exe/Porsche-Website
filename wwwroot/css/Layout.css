@@ -1,5 +1,6 @@
 ﻿body {
     z-index: -1;
+    background-color: transparent;
 }
 
 .home-header {
@@ -42,10 +43,9 @@
 }
 
 .home-icon-img {
-    height: 250px;
+    width: 250px;
     display: flex;
     align-self: center;
-    filter: invert(1);
 }
 
 @media(max-width: 479px) {
