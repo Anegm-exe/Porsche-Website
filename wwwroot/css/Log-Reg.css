@@ -1,3 +1,23 @@
 ﻿body {
     background-color: black;
 }
+.Containerlogin {
+    width: 300px; /* Set the width of the box */
+    margin: 0 auto; /* Center the box horizontally */
+    padding: 20px; /* Add padding inside the box */
+    background-color: #fff; /* Set background color to white */
+    border: 1px solid #ccc; /* Add a border for visual distinction */
+    border-radius: 8px; /* Add rounded corners for aesthetic appeal */
+}
+.image {
+    width: 100px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is block-level */
+    margin: 0 auto; /* Center-align the image horizontally */
+    border-radius: 8px; /* Add rounded corners to the image */
+}
+.title {
+   
+    font-family: 'Roboto', sans-serif; /* Change font to Roboto */
+
+}
