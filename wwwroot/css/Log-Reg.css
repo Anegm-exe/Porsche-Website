@@ -5,7 +5,7 @@
     width: 300px; /* Set the width of the box */
     margin: 0 auto; /* Center the box horizontally */
     padding: 20px; /* Add padding inside the box */
-    background-color: #fff; /* Set background color to white */
+    background-color: transparent; /* Set background color to white */
     border: 1px solid #ccc; /* Add a border for visual distinction */
     border-radius: 8px; /* Add rounded corners for aesthetic appeal */
 }
@@ -19,5 +19,13 @@
 .title {
    
     font-family: 'Roboto', sans-serif; /* Change font to Roboto */
+    color:white;
+    text-align:center;
 
+}
+.textarea {
+    text-align: center;
+}
+a {
+color:white;
 }
