@@ -6,7 +6,7 @@
 
 .text-container {
     position: fixed;
-    bottom: 10px; /* Adjust the distance from the bottom */
+    bottom: 0px; /* Adjust the distance from the bottom */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
