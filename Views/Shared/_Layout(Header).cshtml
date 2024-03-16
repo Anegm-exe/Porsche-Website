@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Layout.css" asp-append-version="true" />
+</head>
+<body>
+    <header data-role="Header" class="home-header">
+        <a href="~/About/Index">
+            <img src="~/images/About.png" class="home-image" onclick="" />
+        </a>
+        <a href="~/Collection/Index">
+            <img src="~/images/Collection.png" class="home-image" onclick="" />
+        </a>
+        <a href="~/Home/Index">
+            <img src="~/images/Porsche.png" class="home-image-mid" />
+        </a>
+        <a href="~/Contact/Index">
+            <img src="~/images/Contact.png" class="home-image" onclick="" />
+        </a>
+        <a href="~/Log_Reg/Index">
+            <img src="~/images/Log-Reg.png" class="home-image" onclick="" />
+        </a>
+        <div data-role="BurgerMenu" class="home-burger-menu" onclick="openNav()">
+            <svg viewBox="0 0 1024 1024" class="home-icon">
+                <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
+            </svg>
+        </div>
+    </header>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <a href="~/Home/Index.cshtml">Suv</a>
+        <a href="~/Home/Index.cshtml">Sedan</a>
+        <a href="~/Home/Index.cshtml">Sports</a>
+        <a href="~/Home/Index.cshtml">Limo</a>
+        <a href="~/Home/Index.cshtml">Muscle</a>
+        <a href="~/Home/Index.cshtml">Super</a>
+        <a href="~/Home/Index.cshtml">Van</a>
+        <a href="~/Home/Index.cshtml">Off-Road</a>
+        <a href="~/Home/Index.cshtml">Pick-Up</a>
+    </div>
+    <div class="content-container">
+    <main role="main" class="pb-3">
+      @RenderBody()
+    </main>
+  </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/Layout.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
