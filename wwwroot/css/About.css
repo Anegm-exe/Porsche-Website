@@ -1,24 +1,24 @@
 ﻿@font-face {
-    font-family: 'Caflisch Script Regular';
-    src: url('../fonts/Caflisch Script Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'CF1';
+    src: url('/fonts/Caflisch Script Regular.ttf') format('woff2');
 }
 
-.about-page-content {
-    font-family: 'Caflisch Script Regular';
+.Text1 {
+    font-family: 'CF1', Roboto;
 }
 
 .about-page {
     background-color: black;
     color: white;
     text-align: center;
+    font-family: 'CF1', Roboto; /* Ahmed */
     position: relative; /* Set a stacking context for z-index */
 }
 
 .section {
     height: 100vh; /* Full height of the viewport */
     display: flex;
+    font-family: 'CF1', Roboto; /* Ahmed */
     align-items: center; /* This will center the text vertically */
     justify-content: center; /* This will center the text horizontally */
     z-index: 1000; /* Text sections will be on top */
