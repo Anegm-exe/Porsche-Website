@@ -23,6 +23,8 @@
     justify-content: center; /* This will center the text horizontally */
     z-index: 1000; /* Text sections will be on top */
     position: relative;
+    font-size:30px;
+    font: bold;
 }
 
 .image-container {
