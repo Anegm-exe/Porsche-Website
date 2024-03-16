@@ -5,16 +5,16 @@
 }
 
 .text-container {
-    position: fixed; /* or absolute if within a specific container */
-    top: 50%; /* Align the center of the element with the center of the screen */
+    position: fixed;
+    bottom: 0px; /* Adjust the distance from the bottom */
     left: 50%;
-    transform: translate(-50%, -50%); /* Offset the element to truly center it */
-    width: 100%; /* Expand to full width */
-    text-align: center; /* Ensure text is centered */
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
     color: white;
-    z-index: 2; /* Ensures it's above the image */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the entire container */
-    padding: 20px 0; /* Vertical padding for the container */
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
 }
 
 .text-container h1, .text-container p {
@@ -35,7 +35,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 1; /* Behind the text */
+    z-index: 1;
     overflow: hidden;
 }
 
@@ -43,5 +43,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 1; /* No transparency */
+    opacity: 1;
+}
+
+.social-media {
+    margin-top: 20px; /* Adjust spacing between links */
+}
+
+.social-media img {
+    width: 30px; /* Adjust the size of the icons */
+    margin: 0 10px; /* Adjust spacing between icons */
 }
