@@ -1,4 +1,15 @@
-﻿.about-page {
+﻿@font-face {
+    font-family: 'Caflisch Script Regular';
+    src: url('../fonts/Caflisch Script Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.about-page-content {
+    font-family: 'Caflisch Script Regular';
+}
+
+.about-page {
     background-color: black;
     color: white;
     text-align: center;
@@ -41,4 +52,3 @@
 .image-container img.active {
     opacity: 1; /* Active image is visible */
 }
-
