@@ -1,5 +1,5 @@
 ﻿body {
-    background-image: url("/images/Log-Reg/Login.jpg");
+    background-image: url("/images/Sign/Sign.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -131,6 +131,27 @@ input {
     height: 13px;
     color: snow;
     filter: invert();
+    cursor: pointer;
+}
+
+/* Data-Picker */
+input[type="date"] {
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.5) sepia(1) saturate(0) hue-rotate(175deg);
+    }
+
+.birth {
+    margin: 0;
+    height: 0px;
+    width: 175px;
+    background: rgba(255, 255, 255, 0);
 }
 
 /* Submit Button */
@@ -150,6 +171,7 @@ input {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    cursor: pointer;
 }
 
 .submitionbutton:hover {
@@ -164,36 +186,31 @@ input {
         background: #4f4f4f;
         color: #fff;
     }
-
+/* Containers */
 .TContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 55px;
+    margin-bottom:0;
 }
 
 .BContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
-    margin-bottom: 20px;
 }
 
-/* Data-Picker */
-input[type="date"] {
-    padding: 15px;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 20px;
+/* SignIn Button */
+.button-style {
+    background: none;
+    color: snow;
     border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 15px;
 }
 
-    input[type="date"]::-webkit-calendar-picker-indicator {
-        filter: invert(0.5) sepia(1) saturate(0) hue-rotate(175deg);
+    .button-style:hover {
+        color: goldenrod;
     }
-
-.birth {
-    margin: 0;
-    height: 0px;
-    width: 175px;
-    background: rgba(255, 255, 255, 0);
-}
