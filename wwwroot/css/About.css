@@ -15,16 +15,26 @@
     position: relative; /* Set a stacking context for z-index */
 }
 
+.section h1, .section p {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px; /* Adjust padding to your liking */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    display: inline-block; /* Makes the element fit its content */
+    margin: 10px 0; /* Adds some space between text elements */
+}
+
 .section {
     height: 100vh; /* Full height of the viewport */
     display: flex;
     font-family: 'CF1', Roboto; /* Ahmed */
     align-items: center; /* This will center the text vertically */
     justify-content: center; /* This will center the text horizontally */
+    flex-direction: column; /* Stack items vertically */
     z-index: 1000; /* Text sections will be on top */
     position: relative;
-    font-size:30px;
-    font: bold;
+    font-size: 30px;
+    font-weight: bolder; /* Corrected from 'font: bolder;' */
+    color: white; /* Ensure text color is white */
 }
 
 .image-container {
