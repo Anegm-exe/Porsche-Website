@@ -1,10 +1,16 @@
-﻿body, html {
+﻿@font-face {
+    font-family: 'CF1';
+    src: url('/fonts/Caflisch Script Regular.ttf') format('woff2');
+}
+
+body, html {
     height: 100%;
     position: relative;
     background-color: black; /* Or any color that suits your design */
 }
 
 .text-container {
+    font-family: 'CF1', Roboto;
     position: fixed;
     bottom: 0px; /* Adjust the distance from the bottom */
     left: 50%;
@@ -20,6 +26,10 @@
 .text-container h1, .text-container p {
     display: inline-block; /* Inline-block for proper padding and margin */
     margin: 10px 0; /* Vertical spacing for elements */
+}
+
+.text-container p{
+    font-size: 30px;
 }
 
 .text-container p a {
@@ -53,4 +63,15 @@
 .social-media img {
     width: 30px; /* Adjust the size of the icons */
     margin: 0 10px; /* Adjust spacing between icons */
+}
+
+.fade-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }

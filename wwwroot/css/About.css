@@ -3,15 +3,11 @@
     src: url('/fonts/Caflisch Script Regular.ttf') format('woff2');
 }
 
-.Text1 {
-    font-family: 'CF1', Roboto;
-}
-
 .about-page {
     background-color: black;
     color: white;
     text-align: center;
-    font-family: 'CF1', Roboto; /* Ahmed */
+    font-family: 'CF1', Roboto;
     position: relative; /* Set a stacking context for z-index */
 }
 
@@ -23,17 +19,20 @@
     margin: 10px 0; /* Adds some space between text elements */
 }
 
+.section p {
+    font-size: 50px;
+}
+
 .section {
     height: 100vh; /* Full height of the viewport */
     display: flex;
-    font-family: 'CF1', Roboto; /* Ahmed */
+    font-family: 'CF1', Roboto;
     align-items: center; /* This will center the text vertically */
     justify-content: center; /* This will center the text horizontally */
     flex-direction: column; /* Stack items vertically */
     z-index: 1000; /* Text sections will be on top */
     position: relative;
     font-size: 30px;
-    font-weight: bolder; /* Corrected from 'font: bolder;' */
     color: white; /* Ensure text color is white */
 }
 
