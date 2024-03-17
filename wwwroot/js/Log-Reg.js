@@ -1,12 +1,20 @@
-let passwordInput = document.getElementById("passwordInput");
-let hideIcon = document.getElementById("hide_icon");
+let passwordInput = document.getElementById("PI1");
+let passwordInput2 = document.getElementById("PI2");
+let hideIcon = document.getElementById("H1");
+let hideIcon2 = document.getElementById("H2");
 
 hideIcon.addEventListener('mousedown', function () {
-    // Show the password when the button is held down
     passwordInput.type = "text";
 });
 
+hideIcon2.addEventListener('mousedown', function () {
+    passwordInput2.type = "text";
+});
+
 hideIcon.addEventListener('mouseup', function () {
-    // Hide the password when the button is released
     passwordInput.type = "password";
+});
+
+hideIcon2.addEventListener('mouseup', function () {
+    passwordInput2.type = "password";
 });

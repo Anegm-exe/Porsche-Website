@@ -122,24 +122,15 @@ input {
             background: white;
         }
 
-/* Forget Password */
-a {
-    color: white;
-    text-decoration: none;
-}
-    a:hover {
-        color: darkgoldenrod;
-    }
-
 /* Password Hide */
 .hideicon {
     position: absolute;
-    right: 15px;
+    right: 10px;
     top: 50%;
-    transform: translateY(-75%);
-    height: 20px;
+    transform: translateY(-125%);
+    height: 13px;
     color: snow;
-    width: 20px;
+    filter: invert();
 }
 
 /* Submit Button */
