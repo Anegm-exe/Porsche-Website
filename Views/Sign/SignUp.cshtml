@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Porsche - SignUp";
-    Layout = "_Layout(Header)";
+    Layout = "_Layout(SignUp)";
 }
 
 <head>
@@ -65,9 +65,13 @@
                 </p>
             </div>
         </div>
+        <!-- Submit -->
+        <div class="BContainer" style="margin-top:75px;">
+            <button class="submitionbutton" role="button">Register</button>
+        </div>
         <!-- SignIn -->
         <div class="TContainer">
-            <p style="color: snow;margin:0;font-size:14px">
+            <p style="color: snow;font-size:14px;margin:0px">
                 Already Have An Account?
             </p>
         </div>
@@ -75,10 +79,6 @@
             <a href="~/Sign/SignIn">
                 <button type="button" class="button-style">SignIn</button>
             </a>
-        </div>
-        <!-- Submit -->
-        <div class="BContainer" style="margin-top:15px;">
-            <button class="submitionbutton" role="button">Register</button>
         </div>
     </div>
     <script type="text/javascript" src="~/js/Sign.js"></script>

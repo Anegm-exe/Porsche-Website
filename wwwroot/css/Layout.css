@@ -25,10 +25,9 @@
 }
 
 .home-image {
-    height: 2.5rem;
+    height: 4rem;
     margin-left: 35px;
     margin-right: 35px;
-    filter: invert(1);
 }
 
 .home-image-mid {

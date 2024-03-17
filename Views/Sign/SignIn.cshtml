@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Porsche - SignIn";
-    Layout = "_Layout";
+    Layout = "_Layout(SignIn)";
 }
 
 <head>
@@ -31,9 +31,13 @@
                 <img src="~/images/Sign/Hide-Pass.png" class="hideicon" id="H">
             </div>
         </div>
+        <!-- Submit -->
+        <div class="BContainer">
+            <button class="submitionbutton" role="button">Login</button>
+        </div>
         <!-- SignIn -->
         <div class="TContainer">
-            <p style="color: snow; margin:5px;font-size:14px">
+            <p style="color: snow; margin-top:20px; margin-bottom:5px;font-size:14px">
                 Don't Have An Account?
             </p>
         </div>
@@ -41,10 +45,6 @@
             <a href="~/Sign/SignUp">
                 <button type="button" class="button-style">SignUp</button>
             </a>
-        </div>
-        <!-- Submit -->
-        <div class="BContainer" style="margin-top: 20px;">
-            <button class="submitionbutton" role="button">Login</button>
         </div>
     </div>
     <script type="text/javascript" src="~/js/SignIn.js"></script>
