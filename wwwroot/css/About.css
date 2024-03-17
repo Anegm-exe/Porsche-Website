@@ -23,6 +23,10 @@
     animation: glow 6s ease-in-out infinite;
 }
 
+.glitch {
+    animation: glow 2s ease-in-out infinite;
+}
+
 .section p {
     font-size: 50px;
 }
@@ -77,3 +81,18 @@
         text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.3);
     }
 }
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+    width: 5px; /* Adjust width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2f3542; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #747d8c; /* Thumb color */
+    border-radius: 6px; /* Roundness of the thumb */
+}
+
