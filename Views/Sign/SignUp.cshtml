@@ -6,13 +6,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/css/Sign.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/SignUp.css" asp-append-version="true" />
 </head>
 <body>
     <div class="Container">
         <!-- Image -->
         <div class="CContainer">
-            <img src="~/images/Log-Reg/Logo.png" alt="Logo" class="logoimg">
+            <img src="~/images/Sign/Logo.png" alt="Logo" class="logoimg">
         </div>
         <div class="Containerlogin">
             <!-- First Name -->
@@ -37,7 +37,7 @@
                     <input type="Password" id="PI1" placeholder="Enter password">
                     @* @Html.TextBoxFor(m => m.Event_Id, new { @type = "number", @placeholder = "EventID  ", @required = "required", @maxlength = "10" }) *@
                     <div class="line"></div>
-                    <img src="~/images/Log-reg/Hide-Pass.png" class="hideicon" id="H1">
+                    <img src="~/images/Sign/Hide-Pass.png" class="hideicon" id="H1">
                 </div>
             </div>
             <!-- password confirm -->
@@ -46,7 +46,7 @@
                     <input type="Password" id="PI2" placeholder="Confirm password">
                     @* @Html.TextBoxFor(m => m.Event_Id, new { @type = "number", @placeholder = "EventID  ", @required = "required", @maxlength = "10" }) *@
                     <div class="line"></div>
-                    <img src="~/images/Log-reg/Hide-Pass.png" class="hideicon" id="H2">
+                    <img src="~/images/Sign/Hide-Pass.png" class="hideicon" id="H2">
                 </div>
             </div>
             <!-- email -->
@@ -67,13 +67,17 @@
         </div>
         <!-- SignIn -->
         <div class="TContainer">
-            <p style="color: snow;margin-right:10px;">Already Have An Account?</p>
+            <p style="color: snow;margin:0;font-size:14px">
+                Already Have An Account?
+            </p>
+        </div>
+        <div class="BContainer" style="margin-top:5px;">
             <a href="~/Sign/SignIn">
-                SignIn
+                <button type="button" class="button-style">SignIn</button>
             </a>
         </div>
         <!-- Submit -->
-        <div class="BContainer">
+        <div class="BContainer" style="margin-top:15px;">
             <button class="submitionbutton" role="button">Register</button>
         </div>
     </div>
