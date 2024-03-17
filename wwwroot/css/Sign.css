@@ -165,6 +165,12 @@ input {
         color: #fff;
     }
 
+.TContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .BContainer {
     display: flex;
     justify-content: center;

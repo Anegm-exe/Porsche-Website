@@ -1,20 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Porsche - Sign-in/Up";
+    ViewData["Title"] = "Porsche - SignUp";
     Layout = "_Layout(Header)";
 }
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/css/Log-Reg.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Sign.css" asp-append-version="true" />
 </head>
 <body>
-   <div class="Container">
-       <!-- Image -->
-       <div class="CContainer">
+    <div class="Container">
+        <!-- Image -->
+        <div class="CContainer">
             <img src="~/images/Log-Reg/Logo.png" alt="Logo" class="logoimg">
-       </div>
-       <div class="Containerlogin">
+        </div>
+        <div class="Containerlogin">
             <!-- First Name -->
             <div class="FirstName">
                 <div class="field">
@@ -64,11 +64,18 @@
                     <input type="date" id="Birth_Date" name="Birth_Date" class="birthdate" placeholder="Birthdate" required>
                 </p>
             </div>
-       </div>
-       <!-- Submit -->
-        <div class="BContainer">
-                <button class="submitionbutton" role="button">Register</button>
         </div>
-   </div>
-   <script type="text/javascript" src="~/js/Log-Reg.js"></script>
+        <!-- SignIn -->
+        <div class="TContainer">
+            <p style="color: snow;margin-right:10px;">Already Have An Account?</p>
+            <a href="~/Sign/SignIn">
+                SignIn
+            </a>
+        </div>
+        <!-- Submit -->
+        <div class="BContainer">
+            <button class="submitionbutton" role="button">Register</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/js/Sign.js"></script>
 </body>
