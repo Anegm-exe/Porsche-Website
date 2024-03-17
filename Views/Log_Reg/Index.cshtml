@@ -31,14 +31,6 @@
                     <div class="line"></div>
                 </div>
             </div>
-            <!-- email -->
-            <div class="Email">
-                <div class="field">
-                    <input id="Email" placeholder="Example@mail.com">
-                    @* @Html.TextBoxFor(m => m.Description, new { @placeholder = "Description", @required = "required", @maxlength = "200" })  *@
-                    <div class="line"></div>
-                </div>
-            </div>
             <!-- password -->
             <div class="Password">
                 <div class="field">
@@ -48,13 +40,6 @@
                     <img src="~/images/hide icon inverted.png" class="hideicon" onclick="pass()" id="hide_icon">
                 </div>
             </div>
-            <!-- BirthDay -->
-            <div class="BD">
-                <p class="birth">
-                    @* @Html.TextBoxFor(m => m.Birth_Date, new { @type = "date", @class = "birthdate", @placeholder = "Birthdate", @required = "required" }) *@
-                    <input type="date" id="Birth_Date" name="Birth_Date" class="birthdate" placeholder="Birthdate" required>
-                </p>
-            </div>
             <!-- password confirm -->
             <div class="Password2">
                 <div class="field">
@@ -63,6 +48,21 @@
                     <div class="line"></div>
                     <img src="~/images/hide icon inverted.png" class="hideicon" onclick="pass()" id="hide_icon">
                 </div>
+            </div>
+            <!-- email -->
+            <div class="Email">
+                <div class="field">
+                    <input id="Email" placeholder="Example@mail.com">
+                    @* @Html.TextBoxFor(m => m.Description, new { @placeholder = "Description", @required = "required", @maxlength = "200" })  *@
+                    <div class="line"></div>
+                </div>
+            </div>
+            <!-- BirthDay -->
+            <div class="BD">
+                <p class="birth">
+                    @* @Html.TextBoxFor(m => m.Birth_Date, new { @type = "date", @class = "birthdate", @placeholder = "Birthdate", @required = "required" }) *@
+                    <input type="date" id="Birth_Date" name="Birth_Date" class="birthdate" placeholder="Birthdate" required>
+                </p>
             </div>
        </div>
        <!-- Submit -->
