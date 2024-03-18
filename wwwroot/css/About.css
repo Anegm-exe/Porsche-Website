@@ -12,7 +12,6 @@
 }
 
 .section h1, .section p {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 10px 20px; /* Adjust padding to your liking */
     border-radius: 10px; /* Optional: adds rounded corners */
     display: inline-block; /* Makes the element fit its content */
@@ -63,14 +62,11 @@
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Align center of the image with viewport center */
-    transition: opacity 1s ease-in-out;
-    opacity: 0; /* Start images as invisible */
     object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    opacity: 0.6; /* Make sure the image is always visible, dimmed */
 }
 
-.image-container img.active {
-    opacity: 1; /* Active image is visible */
-}
+
 
 @keyframes glow {
     0%, 100% {
