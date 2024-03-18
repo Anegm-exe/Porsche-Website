@@ -3,6 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0;
 }
 
 /* Container and Positions */
@@ -144,7 +145,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 75px;
+    margin-top: 80px;
     margin-bottom: 0;
 }
 
