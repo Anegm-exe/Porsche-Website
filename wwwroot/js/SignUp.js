@@ -5,16 +5,20 @@ let hideIcon2 = document.getElementById("H2");
 
 hideIcon.addEventListener('mousedown', function () {
     passwordInput.type = "text";
+    hideIcon.src = "~/images/Sign/Show-Pass.png";
 });
 
 hideIcon2.addEventListener('mousedown', function () {
     passwordInput2.type = "text";
+    hideIcon.src = "~/images/Sign/Show-Pass.png";
 });
 
 hideIcon.addEventListener('mouseup', function () {
     passwordInput.type = "password";
+    hideIcon.src = "~/images/Sign/Hide-Pass.png";
 });
 
 hideIcon2.addEventListener('mouseup', function () {
     passwordInput2.type = "password";
+    hideIcon.src = "~/images/Sign/Hide-Pass.png";
 });
