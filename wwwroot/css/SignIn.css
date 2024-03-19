@@ -16,10 +16,10 @@
     height: 550px;
     padding: 25px;
     background-color: rgba(0, 0, 0, 0.2);
-    border: 5px double snow;
+    border: 5px double rgba(241, 232, 157, 0.6);
     border-radius: 25px;
     backdrop-filter: blur(50px);
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 50px rgba(241, 232, 157, 0.4);
 }
 
 .Containerlogin {
@@ -41,7 +41,6 @@
 }
 
 .logoimg {
-    filter: invert();
     width: 100px;
     margin-top: 25px;
     height: auto;
@@ -56,7 +55,7 @@ input {
     width: 100%;
     max-width: 100%;
     font-size: 1.4em;
-    color: white;
+    color: rgba(241,232,157,.75);
     transition: padding 0.3s 0.2s ease;
     padding-bottom: 15px;
 }
@@ -90,6 +89,10 @@ input {
             background: white;
         }
 
+    .field input::placeholder {
+        color: rgba(241,232,157,.25);
+    }
+
 /* Password Hide */
 .hideicon {
     position: absolute;
@@ -108,7 +111,7 @@ input {
     --s: .3em; /* size of the corner */
     --color: #4f4f4f;
     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
-    color: var(--color);
+    color: rgba(241,232,157,.5);
     --_p: var(--s);
     background: conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
     transition: .3s linear, color 0s, background-color 0s;
@@ -122,17 +125,16 @@ input {
     cursor: pointer;
 }
 
-.submitionbutton:hover {
-    --_p: 0px;
-    
-    outline-color: snow;
-    color: white;
-    outline-offset: .05em;
-}
+    .submitionbutton:hover {
+        --_p: 0px;
+        outline-color: rgba(241,232,157,.75);
+        color: rgba(241,232,157,.75);
+        outline-offset: .05em;
+    }
 
     .submitionbutton:active {
         background: #4f4f4f;
-        color: #fff;
+        color: rgba(241,232,157,1);
     }
 /* Containers */
 .TContainer {
