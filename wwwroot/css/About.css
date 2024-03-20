@@ -4,8 +4,14 @@ body::-webkit-scrollbar { display: none; /* (Chrome, Safari, etc.) */ }
 body::-webkit-scrollbar-track { background: transparent; /* scrollbar track invisible */ }
 body::-webkit-scrollbar-thumb { background: transparent; /* scrollbar thumb (the draggable part) invisible */ }
 
-body{
-    margin:0;
+/* Page Init */ 
+body {
+    background-image: url("/images/about/AboutBG.jpg");
+    background-color: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
 }
 
 @font-face {
@@ -13,77 +19,172 @@ body{
     src: url('/fonts/Caflisch Script Regular.ttf') format('woff2');
 }
 
-.about-page {
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-family: 'CF1', Roboto;
-    position: relative;
-}
-
-.section h1, .section p {
-    padding: 10px 20px;
-    border-radius: 10px;
-    display: inline-block;
-    margin: 10px 0;
-}
-
-.section h1 {
-    animation: glow 6s ease-in-out infinite;
-}
-
-.glitch {
-    animation: glow 2s ease-in-out infinite;
-}
-
-.section p {
-    font-size: 50px;
-}
-
-.section {
-    height: 100vh; /* Full height of the viewport */
-    display: flex;
-    font-family: 'CF1', Roboto;
-    align-items: center; /* This will center the text vertically */
-    justify-content: center; /* This will center the text horizontally */
-    flex-direction: column; /* Stack items vertically */
-    z-index: 1000; /* Text sections will be on top */
-    position: relative;
-    font-size: 30px;
-    color: white; /* Ensure text color is white */
-}
-
-.image-container {
+/* Sections - Containers */
+.Container-Main {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Set the width to viewport width */
-    height: 100vh; /* Set the height to viewport height */
-    z-index: 999; /* Behind the text */
-    overflow: hidden; /* Ensure no overflow from the image */
+    width: 600px;
+    height: 500px;
+    top: 40%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    align-items: center;
+    z-index: 0;
+    color: white;
+    border: none;
 }
 
-.image-container img {
+    .Container-Main h {
+        margin-top: 150px;
+        text-align: center;
+        font-family: 'CF1', Roboto;
+        font-size: 40px;
+        justify-content: center;
+    }
+
+    .Container-Main p {
+        margin-left: 50px;
+        margin-right: 50px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /* Call Animation */
+    .Container-Main h {
+        animation: glow 6s ease-in-out infinite;
+    }
+
+
+/* Side Arrows */
+.arrow {
     position: absolute;
-    min-width: 100%; /* Minimum width is full viewport width */
-    min-height: 100%; /* Minimum height is full viewport height */
-    width: auto; /* Auto width to maintain aspect ratio */
-    height: auto; /* Auto height to maintain aspect ratio */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Align center of the image with viewport center */
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
-    opacity: 0.6; /* Make sure the image is always visible, dimmed */
+    top: 50%;
+    cursor: pointer;
 }
 
+    .arrow span {
+        display: block;
+        width: 1.5vw;
+        height: 1.5vw;
+        border-bottom: 5px solid white;
+        border-right: 5px solid white;
+        margin: -10px;
+        animation: animate 2s infinite;
+    }
 
+    .arrow span:nth-child(2) {
+        animation-delay: -0.2s;
+    }
 
-@keyframes glow {
-    0%, 100% {
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    .arrow span:nth-child(3) {
+        animation-delay: -0.4s;
+    }
+
+#leftarrow {
+    left: 0;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#rightarrow {
+    right: 0;
+    transform: translate(-50%, -50%) rotate(270deg);
+}
+
+/* Animation */
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
     }
 
     50% {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.3);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+    }
+
+    50% {
+        text-shadow: 0 0 11px rgba(255, 255, 255, 0.3), 0 0 12px rgba(255, 255, 255, 0.3), 0 0 13px rgba(255, 255, 255, 0.3), 0 0 14px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Fading Effect */
+@keyframes fadeOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+}
+
+@keyframes fadeOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

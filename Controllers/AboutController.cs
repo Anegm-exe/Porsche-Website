@@ -4,7 +4,7 @@ namespace Porsche_Website.Controllers
 {
     public class AboutController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Info()
         {
             return View();
         }
