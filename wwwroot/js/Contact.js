@@ -33,5 +33,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }, 500); // Matches the fade duration
-    }, 3000); // Total cycle duration
+    }, 6000); // Total cycle duration
 });

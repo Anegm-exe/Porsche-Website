@@ -1,8 +1,19 @@
 ﻿/* Scroll Bar Hide */
-html { scrollbar-width: none; /* Firefox */ }
-body::-webkit-scrollbar { display: none; /* (Chrome, Safari, etc.) */ }
-body::-webkit-scrollbar-track { background: transparent; /* scrollbar track invisible */ }
-body::-webkit-scrollbar-thumb { background: transparent; /* scrollbar thumb (the draggable part) invisible */ }
+html {
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* (Chrome, Safari, etc.) */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent; /* scrollbar track invisible */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: transparent; /* scrollbar thumb (the draggable part) invisible */
+}
 
 @font-face {
     font-family: 'CF1';
@@ -95,3 +106,60 @@ body, html {
     }
 }
 
+.interactive-circle {
+    position: fixed;
+    left: 0;
+    bottom: 10px; /* Adjusted to be at the bottom left */
+    width: 50px; /* Initial size of the circle */
+    height: 50px;
+    background-color: rgba(255, 215, 0, 0); /* Transparent circle */
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 100;
+    animation: glowingCircle 6s ease-in-out infinite;
+}
+
+.interactive-circle:hover {
+    width: 350px; /* Match the width of the text container */
+    height: 203px; /* Adjust height based on content */
+    bottom: 0px; /* Ensure it's aligned with the bottom of the viewport */
+    border-radius: 10px; /* Optional: For rounded corners, you can set this to a specific value */
+    background-color: rgba(255, 215, 0, 0); /* Transparent square */
+    box-shadow: none; /* Stops the glow animation */
+    animation: glowingCircle 6s ease-in-out infinite;
+}
+
+.content {
+    font-family: 'CF1', Roboto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white; /* Adjust based on your design */
+    text-align: center;
+    padding: 20px 0; /* Match padding with the text container */
+    font-size: 22px; /* Adjust as needed */
+    width: 100%; /* Ensure content fills the expanded square */
+}
+
+.interactive-circle:hover .content {
+    opacity: 1;
+    transition: opacity 2.5s ease; /* Slower fade-in */
+}
+
+@keyframes glowingCircle {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+    }
+}
