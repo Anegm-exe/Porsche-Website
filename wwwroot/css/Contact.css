@@ -95,3 +95,56 @@ body, html {
     }
 }
 
+.interactive-circle {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* Smaller circle */
+    height: 40px;
+    background-color: gold; /* Gold color */
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 100; /* Ensure it's above most other elements */
+    animation: glowingCircle 6s ease-in-out infinite; /* Apply the animation */
+}
+
+.interactive-circle:hover {
+    width: 300px; /* Bigger square */
+    height: 300px;
+    border-radius: 10px; /* Rounded corners for the square */
+}
+
+.content {
+    font-family: 'CF1', Roboto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: black; /* Text color changed to black */
+    text-align: center;
+    padding: 10px;
+    font-size: 30px; /* Smaller text size */
+    font-weight: bolder;
+}
+
+.interactive-circle:hover .content {
+    opacity: 1;
+}
+
+@keyframes glowingCircle {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+    }
+}
