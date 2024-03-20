@@ -1,17 +1,30 @@
-var texts = [
-    { h: "Porsche? The Dream", p: "Founded in 1931 by Ferdinand Porsche, Porsche initially offered motor vehicle development work and consulting but did not build any cars under its own name. The first Porsche-branded vehicle, the Porsche 356, was produced in 1948. It was a lightweight and nimble sports car based on Volkswagen components." },
-    { h: "Mission", p: "Porsche's mission is to build sports cars that deliver exceptional performance, precision engineering, and timeless design. The company aims to provide an unparalleled driving experience, combining cutting-edge technology with the thrill of driving." },
-    { h: "Notable Acheivements", p: "Porsche has achieved significant success in motorsport, innovation, design excellence, and brand loyalty. Its victories in prestigious races like the 24 Hours of Le Mans and its continuous innovation in automotive technology have solidified its position as one of the most respected brands in the industry." },
-    { h: "With that the legendary cars of Porsche were introduced to our world", p: "which became a better place :D, but this isn't the end for Porsche's beasts" },
+/* Initialization */
+let texts = [
+    { h: "Porsche:A Legacy of Automotive Excellence", p: "Porsche stands as a symbol of automotive excellence, renowned for its precision engineering, timeless design, and unparalleled performance. Founded in 1931 by Ferdinand Porsche, the company has continually pushed the boundaries of innovation, setting new standards in the automotive industry. From the iconic Porsche 911 to the exhilarating Porsche Cayenne, every vehicle bearing the Porsche emblem embodies the brand's commitment to quality, craftsmanship, and driving pleasure. With a rich heritage rooted in racing success, Porsche has translated its motorsport DNA into road-going vehicles that deliver an unmatched driving experience." },
+    { h: "Mission: Pursuing Perfection on Every Road", p: "At the core of Porsche's mission is the relentless pursuit of perfection. With a focus on innovation, sustainability, and customer satisfaction, Porsche strives to exceed expectations at every turn. Whether it's developing cutting-edge technology, reducing environmental impact, or enhancing customer service, Porsche remains committed to excellence in all aspects of its operations. Through its mission, Porsche seeks to inspire passion and excitement among drivers worldwide, creating vehicles that evoke emotions and elevate the driving experience to new heights.By staying true to its core values while embracing change, Porsche continues to shape the future of mobility while honoring its storied heritage." },
+    { h: "Achievements: A Legacy of Racing Glory", p: "Porsche's achievements on the racetrack are the stuff of legends, spanning decades of dominance in motorsport. From winning the prestigious 24 Hours of Le Mans to conquering the grueling Nürburgring, Porsche has amassed an impressive collection of trophies and titles, solidifying its status as one of the most successful racing teams in history. With iconic cars like the Porsche 917 and the Porsche 956, the brand has left an indelible mark on motorsport, showcasing its engineering prowess and competitive spirit on the world stage.Through innovation, determination, and sheer skill, Porsche has achieved greatness in racing, setting records and pushing the limits of what's possible on the track." },
+    { h: "Globality: Uniting Drivers Across Continents", p: "Porsche's global presence extends far beyond its headquarters in Stuttgart, Germany, reaching drivers on every continent. With a network of dealerships, service centers, and enthusiasts worldwide, Porsche has cultivated a diverse and passionate community united by a shared love for driving and craftsmanship. Whether it's cruising along the scenic roads of California, tackling the winding passes of the Swiss Alps, or navigating the bustling streets of Tokyo, Porsche owners experience the thrill of driving wherever they go. Through events, clubs, and online forums, Porsche fosters connections among enthusiasts, creating a global family that celebrates the joy of automotive excellence." },
+    { h: "Future: Pioneering the Road Ahead", p: "As the automotive industry evolves, Porsche remains at the forefront of innovation, shaping the future of mobility with groundbreaking technologies and visionary concepts. From electric powertrains to autonomous driving systems, Porsche is redefining the driving experience for the 21st century, while staying true to its heritage of performance and craftsmanship.With initiatives like the Porsche Taycan, the brand's first all-electric sports car, Porsche is leading the charge towards a more sustainable and connected future. By embracing new challenges and opportunities, Porsche continues to inspire drivers around the world, proving that the spirit of innovation knows no bounds. As we look ahead, one thing is certain: the future of driving will be shaped by Porsche's unwavering commitment to excellence and innovation." }
 ];
+let index = 0;
+let leftArrow = document.getElementById("leftarrow");
+let rightArrow = document.getElementById("rightarrow");
+let dotsContainer = document.getElementById("dots");
 
-var index = 0;
-var leftArrow = document.getElementById("leftarrow");
-var rightArrow = document.getElementById("rightarrow");
+/* Dot Code */
+for (let i = 0; i < texts.length; i++) {
+    var dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === index) {
+        dot.classList.add("active");
+    }
+    dotsContainer.appendChild(dot);
+}
 
+/* Left And Right Buttons */
 leftArrow.addEventListener("click", function () {
-    var textElement = document.getElementById("text");
-    var subTextElement = document.getElementById("subText");
+    let textElement = document.getElementById("text");
+    let subTextElement = document.getElementById("subText");
 
     leftArrow.style.pointerEvents = "none";
     rightArrow.style.pointerEvents = "none";
@@ -39,8 +52,8 @@ leftArrow.addEventListener("click", function () {
 });
 
 rightArrow.addEventListener("click", function () {
-    var textElement = document.getElementById("text");
-    var subTextElement = document.getElementById("subText");
+    let textElement = document.getElementById("text");
+    let subTextElement = document.getElementById("subText");
 
     leftArrow.style.pointerEvents = "none";
     rightArrow.style.pointerEvents = "none";
@@ -67,7 +80,14 @@ rightArrow.addEventListener("click", function () {
     }, 500);
 });
 
+/* Text Final Update */
 function updateText() {
     document.getElementById("text").innerText = texts[index].h;
     document.getElementById("subText").innerText = texts[index].p;
+
+    let dots = document.getElementsByClassName("dot");
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    dots[index].classList.add("active");
 }

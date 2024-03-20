@@ -11,6 +11,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    width: 100%;
     margin: 0;
 }
 
@@ -23,13 +24,12 @@ body {
 .Container-Main {
     position: fixed;
     width: 600px;
-    height: 500px;
-    top: 40%;
-    left: 75%;
-    transform: translate(-50%, -50%);
+    height: 400px;
+    top: 0;
+    right: 0;
+    transform: translate(-25%, 15%);
     display: flex;
     flex-direction: column;
-    padding: 25px;
     align-items: center;
     z-index: 0;
     color: white;
@@ -60,7 +60,8 @@ body {
 /* Side Arrows */
 .arrow {
     position: absolute;
-    top: 50%;
+    top: 75%;
+    margin: -25px;
     cursor: pointer;
 }
 
@@ -68,8 +69,8 @@ body {
         display: block;
         width: 1.5vw;
         height: 1.5vw;
-        border-bottom: 5px solid white;
-        border-right: 5px solid white;
+        border-bottom: 5px solid darkred;
+        border-right: 5px solid darkred;
         margin: -10px;
         animation: animate 2s infinite;
     }
@@ -90,6 +91,23 @@ body {
 #rightarrow {
     right: 0;
     transform: translate(-50%, -50%) rotate(270deg);
+}
+
+/* Dots */
+.dot {
+    position: relative;
+    height: 5px;
+    width: 5px;
+    margin: 0 2px;
+    align-content: center;
+    background-color: snow;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: goldenrod;
 }
 
 /* Animation */

@@ -1,30 +1,21 @@
 ﻿/* Scroll Bar Hide */
-html {
-    scrollbar-width: none; /* Firefox */
-}
+html { scrollbar-width: none; /* Firefox */ }
+body::-webkit-scrollbar { display: none; /* (Chrome, Safari, etc.) */ }
+body::-webkit-scrollbar-track { background: transparent; /* scrollbar track invisible */ }
+body::-webkit-scrollbar-thumb { background: transparent; /* scrollbar thumb (the draggable part) invisible */ }
 
-body::-webkit-scrollbar {
-    display: none; /* (Chrome, Safari, etc.) */
-}
-
-body::-webkit-scrollbar-track {
-    background: transparent; /* scrollbar track invisible */
-}
-
-body::-webkit-scrollbar-thumb {
-    background: transparent; /* scrollbar thumb (the draggable part) invisible */
+body, html {
+    margin: 0;
+    background-image: url("/images/contact/ContactBG.png");
+    background-color: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 @font-face {
     font-family: 'CF1';
     src: url('/fonts/Caflisch Script Regular.ttf') format('woff2');
-}
-
-body, html {
-    height: 100%;
-    position: relative;
-    margin: 0;
-    background-color: black; /* Or any color that suits your design */
 }
 
 .text-container {
