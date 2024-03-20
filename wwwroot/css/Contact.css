@@ -110,8 +110,8 @@ body, html {
     position: fixed;
     left: 0;
     bottom: 10px; /* Adjusted to be at the bottom left */
-    width: 50px; /* Initial size of the circle */
-    height: 50px;
+    width: 45px; /* Initial size of the circle */
+    height: 45px;
     background-color: rgba(255, 215, 0, 0); /* Transparent circle */
     border-radius: 50%;
     transition: all 0.5s ease;
@@ -125,7 +125,7 @@ body, html {
 }
 
 .interactive-circle:hover {
-    width: 350px; /* Match the width of the text container */
+    width: 320px; /* Match the width of the text container */
     height: 203px; /* Adjust height based on content */
     bottom: 0px; /* Ensure it's aligned with the bottom of the viewport */
     border-radius: 10px; /* Optional: For rounded corners, you can set this to a specific value */
@@ -141,7 +141,7 @@ body, html {
     color: white; /* Adjust based on your design */
     text-align: center;
     padding: 20px 0; /* Match padding with the text container */
-    font-size: 22px; /* Adjust as needed */
+    font-size: 20px; /* Adjust as needed */
     width: 100%; /* Ensure content fills the expanded square */
 }
 
