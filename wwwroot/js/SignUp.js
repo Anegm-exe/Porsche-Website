@@ -1,7 +1,5 @@
-let passwordInput = document.getElementById("PI");
-let hideIcon = document.getElementById("HI");
-let passwordInput2 = document.getElementById("P");
-let hideIcon2 = document.getElementById("H");
+let passwordInput = document.getElementById("Passone");
+let hideIcon = document.getElementById("Iconone");
 
 hideIcon.addEventListener('mousedown', function () {
     passwordInput.type = "text";
@@ -12,6 +10,9 @@ hideIcon.addEventListener('mouseup', function () {
     passwordInput.type = "password";
     hideIcon.src = "/images/Sign/Hide-Pass.png";
 });
+
+let passwordInput2 = document.getElementById("Passtwo");
+let hideIcon2 = document.getElementById("Icontwo");
 
 hideIcon2.addEventListener('mousedown', function () {
     passwordInput2.type = "text";
