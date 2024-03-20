@@ -74,6 +74,7 @@ body, html {
 .social-media img {
     width: 30px; /* Adjust the size of the icons */
     margin: 0 10px; /* Adjust spacing between icons */
+    animation: glowIcons 6s ease-in-out infinite; /* Apply the glow animation */
 }
 
 .fade-img {
@@ -89,11 +90,15 @@ body, html {
 
 @keyframes glow {
     0%, 100% {
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* More dimmed initial and final state */
     }
 
     50% {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.3);
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 
+            0 0 30px rgba(255, 255, 255, 0.35), 
+            0 0 40px rgba(255, 255, 255, 0.3), 
+            0 0 50px rgba(255, 255, 255, 0.25), 
+            0 0 60px rgba(255, 255, 255, 0.2); /* More dimmed glow at the peak of the animation */
     }
 }
 
@@ -143,14 +148,36 @@ body, html {
 
 @keyframes glowingCircle {
     0% {
-        box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 
+            0 0 15px rgba(251, 242, 161, 0.4), 
+            0 0 30px rgba(251, 242, 161, 0.2);
     }
 
     50% {
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
+        box-shadow: 0 0 10px rgba(251, 242, 161, 1), 
+            0 0 20px rgba(251, 242, 161, 0.8), 
+            0 0 40px rgba(251, 242, 161, 0.6);
     }
 
     100% {
-        box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 
+            0 0 15px rgba(251, 242, 161, 0.4), 
+            0 0 30px rgba(251, 242, 161, 0.2);
     }
 }
+
+@keyframes glowIcons {
+    0%, 100% {
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2)); /* More dimmed initial and final state */
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) 
+        drop-shadow(0 0 30px rgba(255, 255, 255, 0.25)) 
+        drop-shadow(0 0 40px rgba(255, 255, 255, 0.2)) 
+        drop-shadow(0 0 50px rgba(255, 255, 255, 0.15)) 
+        drop-shadow(0 0 60px rgba(255, 255, 255, 0.1)); /* More dimmed glow at the peak of the animation */
+    }
+}
+
+
