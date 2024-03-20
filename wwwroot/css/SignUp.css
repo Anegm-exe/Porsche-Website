@@ -19,7 +19,7 @@
     border: 5px double rgba(241, 232, 157, 0.6);
     border-radius: 25px;
     backdrop-filter: blur(50px);
-    box-shadow: 0 0 50px rgba(241, 232, 157, 0.4);
+    box-shadow: 0 0 50px rgba(241, 232, 157, 0.2);
 }
 
 .Containerlogin {
