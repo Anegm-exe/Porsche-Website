@@ -152,14 +152,16 @@ body, html {
 
 @keyframes glowingCircle {
     0% {
-        box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 0 0 15px rgba(251, 242, 161, 0.4), 0 0 30px rgba(251, 242, 161, 0.2);
     }
 
     50% {
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
+        box-shadow: 0 0 10px rgba(251, 242, 161, 1), 0 0 20px rgba(251, 242, 161, 0.8), 0 0 40px rgba(251, 242, 161, 0.6);
     }
 
     100% {
-        box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 0 0 15px rgba(251, 242, 161, 0.4), 0 0 30px rgba(251, 242, 161, 0.2);
     }
 }
+
+
