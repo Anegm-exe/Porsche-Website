@@ -1,7 +1,7 @@
-let passwordInput = document.getElementById("PI1");
-let passwordInput2 = document.getElementById("PI2");
-let hideIcon = document.getElementById("H1");
-let hideIcon2 = document.getElementById("H2");
+let passwordInput = document.getElementById("P");
+let passwordInput2 = document.getElementById("PP");
+let hideIcon = document.getElementById("H");
+let hideIcon2 = document.getElementById("HH");
 
 hideIcon.addEventListener('mousedown', function () {
     passwordInput.type = "text";
