@@ -10,11 +10,17 @@ let index = 0;
 let leftArrow = document.getElementById("leftarrow");
 let rightArrow = document.getElementById("rightarrow");
 let dotsContainer = document.getElementById("dots");
+let containerWidth = 600;
+let dotWidth = 5;
+let dotMargin = 5;
+let totalDotWidth = (dotWidth + dotMargin) * texts.length - dotMargin;
+let startLeft = (containerWidth - totalDotWidth) / 2;
 
 /* Dot Code */
 for (let i = 0; i < texts.length; i++) {
-    var dot = document.createElement("span");
+    let dot = document.createElement("span");
     dot.classList.add("dot");
+    dot.style.left = (startLeft - 5 + i * (dotWidth + dotMargin)) + 'px';
     if (i === index) {
         dot.classList.add("active");
     }
