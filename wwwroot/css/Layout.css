@@ -1,6 +1,12 @@
-﻿body, html {
+﻿@font-face {
+    font-family: 'CF1';
+    src: url('/fonts/Caflisch Script Regular.ttf') format('woff2');
+}
+
+body, html {
     position: relative;
     z-index: -1;
+    font-family: 'CF1', Roboto;
 }
 
 /*sleepy made changes*/
@@ -169,8 +175,6 @@
 /* Styles for the interactive circle within the footer */
 .footer-future .interactive-circle {
     position: relative;
-    left: auto;
-    bottom: auto;
     width: 45px;
     height: 45px;
     background-color: rgba(255, 215, 0, 0); /* Initially transparent */
@@ -183,14 +187,16 @@
     cursor: pointer;
     z-index: 100;
     animation: glowingCircle 6s ease-in-out infinite;
+    margin: auto; /* Center the circle in its container */
 }
 
     .footer-future .interactive-circle:hover {
-        width: 320px; /* Adjust as needed for the footer */
-        height: 203px; /* Adjust as needed for content */
+        width: 330px; /* Adjust as needed for the footer */
+        height: 225px; /* Adjust as needed for content */
         border-radius: 10px; /* Adjust if you prefer rounded corners */
         background-color: rgba(255, 215, 0, 0); /* Slightly opaque or adjust as needed */
         animation: glowingCircle 6s ease-in-out infinite;
+        margin: auto; /* Maintain the position in the center */
     }
 
 .footer-future .content {
@@ -198,13 +204,39 @@
     transition: opacity 0.3s ease;
     color: white;
     text-align: center;
-    font-size: 20px; /* Adjust as needed */
+    font-size: 22px; /* Adjust as needed */
 }
 
 .footer-future .interactive-circle:hover .content {
     opacity: 1;
-    transition: opacity 2.5s ease; /* Slower fade-in for content */
+    transition: opacity 3s ease; /* Slower fade-in for content */
 }
+
+.footer-text h3, .footer-text ul {
+    text-align: center;
+}
+
+.footer-text h3{
+    font-size: 50px;
+    margin: 0;
+}
+
+.footer-text ul li a {
+    color: grey; /* Default text color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+    font-size: x-large;
+}
+
+    .footer-text ul li a:hover {
+        color: white; /* Text color on hover */
+    }
+
+.footer-text ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes the default padding on the left, if necessary */
+}
+
 
 @keyframes glowingCircle {
     0%, 100% {
@@ -241,6 +273,7 @@
             opacity: 0; /* Optionally hide content on hover for small screens */
         }
 }
+
 
 /* social media icons */
 .social-media {
