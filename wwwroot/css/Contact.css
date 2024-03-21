@@ -102,33 +102,6 @@ body, html {
     }
 }
 
-.interactive-circle {
-    position: fixed;
-    left: 0;
-    bottom: 10px; /* Adjusted to be at the bottom left */
-    width: 45px; /* Initial size of the circle */
-    height: 45px;
-    background-color: rgba(255, 215, 0, 0); /* Transparent circle */
-    border-radius: 50%;
-    transition: all 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    cursor: pointer;
-    z-index: 100;
-    animation: glowingCircle 6s ease-in-out infinite;
-}
-
-.interactive-circle:hover {
-    width: 320px; /* Match the width of the text container */
-    height: 203px; /* Adjust height based on content */
-    bottom: 0px; /* Ensure it's aligned with the bottom of the viewport */
-    border-radius: 10px; /* Optional: For rounded corners, you can set this to a specific value */
-    background-color: rgba(255, 215, 0, 0); /* Transparent square */
-    box-shadow: none; /* Stops the glow animation */
-    animation: glowingCircle 6s ease-in-out infinite;
-}
 
 .content {
     font-family: 'CF1', Roboto;
@@ -141,44 +114,7 @@ body, html {
     width: 100%; /* Ensure content fills the expanded square */
 }
 
-.interactive-circle:hover .content {
-    opacity: 1;
-    transition: opacity 2.5s ease; /* Slower fade-in */
-}
 
-@keyframes glowingCircle {
-    0% {
-        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 
-            0 0 15px rgba(251, 242, 161, 0.4), 
-            0 0 30px rgba(251, 242, 161, 0.2);
-    }
-
-    50% {
-        box-shadow: 0 0 10px rgba(251, 242, 161, 1), 
-            0 0 20px rgba(251, 242, 161, 0.8), 
-            0 0 40px rgba(251, 242, 161, 0.6);
-    }
-
-    100% {
-        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 
-            0 0 15px rgba(251, 242, 161, 0.4), 
-            0 0 30px rgba(251, 242, 161, 0.2);
-    }
-}
-
-@keyframes glowIcons {
-    0%, 100% {
-        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2)); /* More dimmed initial and final state */
-    }
-
-    50% {
-        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) 
-        drop-shadow(0 0 30px rgba(255, 255, 255, 0.25)) 
-        drop-shadow(0 0 40px rgba(255, 255, 255, 0.2)) 
-        drop-shadow(0 0 50px rgba(255, 255, 255, 0.15)) 
-        drop-shadow(0 0 60px rgba(255, 255, 255, 0.1)); /* More dimmed glow at the peak of the animation */
-    }
-}
 
 /* contain deez nuts */
 .Container-MM {
