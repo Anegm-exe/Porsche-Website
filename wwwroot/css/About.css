@@ -29,13 +29,15 @@ body {
 }
 
 .Vcontainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
-    align-content: center;
-    width: 80%;
-    height: 75%;
-    top: 0;
-    right: 50%;
+    align-items: center;
+    width: 950px;
+    height: 534px;
 }
 
 .Container-Main {
