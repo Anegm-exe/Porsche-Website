@@ -67,16 +67,6 @@ body, html {
     opacity: 1;
 }
 
-.social-media {
-    margin-top: 20px; /* Adjust spacing between links */
-}
-
-.social-media img {
-    width: 30px; /* Adjust the size of the icons */
-    margin: 0 10px; /* Adjust spacing between icons */
-    animation: glowIcons 6s ease-in-out infinite; /* Apply the glow animation */
-}
-
 .fade-img {
     position: absolute;
     top: 0;
@@ -86,20 +76,6 @@ body, html {
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-}
-
-@keyframes glow {
-    0%, 100% {
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* More dimmed initial and final state */
-    }
-
-    50% {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 
-            0 0 30px rgba(255, 255, 255, 0.35), 
-            0 0 40px rgba(255, 255, 255, 0.3), 
-            0 0 50px rgba(255, 255, 255, 0.25), 
-            0 0 60px rgba(255, 255, 255, 0.2); /* More dimmed glow at the peak of the animation */
-    }
 }
 
 
