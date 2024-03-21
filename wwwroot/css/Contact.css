@@ -18,39 +18,46 @@ body, html {
     src: url('/fonts/Caflisch Script Regular.ttf') format('woff2');
 }
 
-/* contain deez nuts */
+/* Containers */
 .Container-MM {
     position: relative;
     width: 100%;
     height: 1000px;   
-    z-index: -1;
+    z-index: 0;
     background-color: transparent;
 }
 
 /* Styles for the interactive circle within the footer */
 .interactive-circle {
-    position: relative;
-    top: 150px;
-    width: 45px;
-    height: 45px;
-    background-color: rgba(255, 215, 0, 0); /* Initially transparent */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("/images/contact/Team.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     border-radius: 50%;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     cursor: pointer;
-    animation: glowingCircle 6s ease-in-out infinite;
+    animation: glowingCircle 3s ease-in-out infinite;
     margin: auto; /* Center the circle in its container */
 }
 
     .interactive-circle:hover {
-        width: 330px; /* Adjust as needed for the footer */
-        height: 225px; /* Adjust as needed for content */
-        border-radius: 10px; /* Adjust if you prefer rounded corners */
-        background-color: rgba(255, 215, 0, 0); /* Slightly opaque or adjust as needed */
-        animation: glowingCircle 6s ease-in-out infinite;
-        margin: auto; /* Maintain the position in the center */
+        width: 650px;
+        height: 550px;
+        border-radius: 10px;
+        background-image: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        animation: glowingCircle 3s ease-in-out infinite;
+        margin: 0; /* Maintain the position in the center */
     }
 
 .content {
@@ -58,7 +65,23 @@ body, html {
     transition: opacity 0.3s ease;
     color: white;
     text-align: center;
-    font-size: 22px;
+}
+
+.name {
+    transition: opacity 0.3s ease;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.id {
+    transition: opacity 0.3s ease;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
 }
 
 .interactive-circle:hover .content {
@@ -66,38 +89,12 @@ body, html {
     transition: opacity 3s ease; /* Slower fade-in for content */
 }
 
-/* Responsive adjustments */
-@media (max-width: 720px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-section {
-        margin-bottom: 20px;
-    }
-
-    .footer-icons .social-media {
-        justify-content: center;
-    }
-
-    .footer-future .interactive-circle, .footer-future .interactive-circle:hover {
-        width: 45px; /* Adjust size for small screens */
-        height: 45px;
-        margin: 0 auto; /* Center circle */
-    }
-
-        .footer-future .interactive-circle:hover .content {
-            opacity: 0; /* Optionally hide content on hover for small screens */
-        }
-}
-
 @keyframes glowingCircle {
     0%, 100% {
-        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 0 0 15px rgba(251, 242, 161, 0.4), 0 0 30px rgba(251, 242, 161, 0.2);
+        box-shadow: 0 0 5px white;
     }
 
     50% {
-        box-shadow: 0 0 10px rgba(251, 242, 161, 1), 0 0 20px rgba(251, 242, 161, 0.8), 0 0 40px rgba(251, 242, 161, 0.6);
+        box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
     }
 }
