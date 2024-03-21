@@ -24,10 +24,19 @@ body {
 .Container-MM{
     position: relative;
     width: 100%;
-    height: 1000px;
-    z-index: -1;
-    background-color: transparent;
+    z-index: 0;
 }
+
+.Vcontainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    height: 75%;
+    top: 0;
+    right: 50%;
+}
+
 .Container-Main {
     position: fixed;
     width: 600px;
@@ -97,6 +106,81 @@ body {
 #rightarrow {
     right: 0;
     transform: translate(-50%, -50%) rotate(270deg);
+}
+
+/* Down Arrow */
+.arrow-icon {
+    background-color: transparent;
+    height: 2.8em;
+    width: 2.8em;
+    display: block;
+    top: 0;
+    padding: 0.5em;
+    margin: 1em auto;
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.left-bar {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 10px;
+    display: block;
+    transform: rotate(35deg);
+    float: right;
+    border-radius: 2px;
+}
+
+    .left-bar:after {
+        content: "";
+        background-color: white;
+        width: 40px;
+        height: 10px;
+        display: block;
+        float: right;
+        border-radius: 6px 10px 10px 6px;
+        transition: all 0.3s ease; /* Replace $duration and $easing with actual values */
+        z-index: -1;
+    }
+
+.right-bar {
+    position: absolute;
+    background-color: transparent;
+    top: 0px;
+    left: 26px;
+    width: 40px;
+    height: 10px;
+    display: block;
+    transform: rotate(-35deg);
+    float: right;
+    border-radius: 2px;
+}
+
+    .right-bar:after {
+        content: "";
+        background-color: white;
+        width: 40px;
+        height: 10px;
+        display: block;
+        float: right;
+        border-radius: 10px 6px 6px 10px;
+        transition: all 0.3s ease; /* Replace $duration and $easing with actual values */
+        z-index: -1;
+    }
+
+
+.open .left-bar:after {
+    transform-origin: center center;
+    transform: rotate(-70deg);
+}
+
+.open .right-bar:after {
+    transform-origin: center center;
+    transform: rotate(70deg);
 }
 
 /* Dots */
@@ -213,4 +297,9 @@ body {
     to {
         opacity: 1;
     }
+}
+
+/* Background Color */
+#C2 {
+    transition: background-color 0.5s ease; /* Add this line */
 }

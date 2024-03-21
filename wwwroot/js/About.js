@@ -97,3 +97,21 @@ function updateText() {
     }
     dots[index].classList.add("active");
 }
+
+/* Down Arrow Function */
+let arrowIcon = document.getElementById("arrowdown");
+let C2 = document.getElementById("C2");
+let isDown = false;
+
+arrowIcon.addEventListener("click", function () {
+    this.classList.toggle("open");
+    if (!isDown) {
+        window.scrollBy({ top: 825, behavior: 'smooth' });
+        C2.style.backgroundColor = "black";
+        isDown = true;
+    } else {
+        window.scrollBy({ top: -825, behavior: 'smooth' });
+        C2.style.backgroundColor = "transparent";
+        isDown = false;
+    }
+});
