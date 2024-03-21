@@ -198,3 +198,24 @@
             margin: 0% 3%;
         }
 }
+
+/* social media icons */
+.social-media {
+    margin-top: 20px; /* Adjust spacing between links */
+}
+
+    .social-media img {
+        width: 30px; /* Adjust the size of the icons */
+        margin: 0 10px; /* Adjust spacing between icons */
+        animation: glowIcons 6s ease-in-out infinite; /* Apply the glow animation */
+    }
+
+@keyframes glowIcons {
+    0%, 100% {
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2)); /* More dimmed initial and final state */
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.25)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.2)) drop-shadow(0 0 50px rgba(255, 255, 255, 0.15)) drop-shadow(0 0 60px rgba(255, 255, 255, 0.1)); /* More dimmed glow at the peak of the animation */
+    }
+}
