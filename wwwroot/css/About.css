@@ -21,6 +21,13 @@ body {
 }
 
 /* Sections - Containers */
+.Container-MM{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    z-index: -1;
+    background-color: transparent;
+}
 .Container-Main {
     position: fixed;
     width: 600px;
