@@ -18,87 +18,86 @@ body, html {
     src: url('/fonts/Caflisch Script Regular.ttf') format('woff2');
 }
 
-.text-container {
-    font-family: 'CF1', Roboto;
-    position: fixed;
-    bottom: 0px; /* Adjust the distance from the bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    color: white;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 0;
-}
-
-.text-container h1, .text-container p {
-    display: inline-block; /* Inline-block for proper padding and margin */
-    margin: 10px 0; /* Vertical spacing for elements */
-}
-
-.text-container p {
-    font-size: 30px;
-    animation: glow 6s ease-in-out infinite;
-    font-weight: bolder;
-}
-
-.text-container p a {
-    color: white;
-    text-decoration: none; /* Remove underline */
-    border-bottom: 2px solid white; /* Add underline effect */
-    padding-bottom: 3px; /* Space between text and underline */
-}
-
-.image-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 1;
-}
-
-.fade-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-
-.content {
-    font-family: 'CF1', Roboto;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    color: white; /* Adjust based on your design */
-    text-align: center;
-    padding: 20px 0; /* Match padding with the text container */
-    font-size: 20px; /* Adjust as needed */
-    width: 100%; /* Ensure content fills the expanded square */
-}
-
-
-
 /* contain deez nuts */
 .Container-MM {
     position: relative;
     width: 100%;
-    height: 1000px;
+    height: 1000px;   
     z-index: -1;
     background-color: transparent;
 }
 
+/* Styles for the interactive circle within the footer */
+.interactive-circle {
+    position: relative;
+    top: 150px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 215, 0, 0); /* Initially transparent */
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    animation: glowingCircle 6s ease-in-out infinite;
+    margin: auto; /* Center the circle in its container */
+}
 
+    .interactive-circle:hover {
+        width: 330px; /* Adjust as needed for the footer */
+        height: 225px; /* Adjust as needed for content */
+        border-radius: 10px; /* Adjust if you prefer rounded corners */
+        background-color: rgba(255, 215, 0, 0); /* Slightly opaque or adjust as needed */
+        animation: glowingCircle 6s ease-in-out infinite;
+        margin: auto; /* Maintain the position in the center */
+    }
+
+.content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
+.interactive-circle:hover .content {
+    opacity: 1;
+    transition: opacity 3s ease; /* Slower fade-in for content */
+}
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-icons .social-media {
+        justify-content: center;
+    }
+
+    .footer-future .interactive-circle, .footer-future .interactive-circle:hover {
+        width: 45px; /* Adjust size for small screens */
+        height: 45px;
+        margin: 0 auto; /* Center circle */
+    }
+
+        .footer-future .interactive-circle:hover .content {
+            opacity: 0; /* Optionally hide content on hover for small screens */
+        }
+}
+
+@keyframes glowingCircle {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 0 0 15px rgba(251, 242, 161, 0.4), 0 0 30px rgba(251, 242, 161, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(251, 242, 161, 1), 0 0 20px rgba(251, 242, 161, 0.8), 0 0 40px rgba(251, 242, 161, 0.6);
+    }
+}

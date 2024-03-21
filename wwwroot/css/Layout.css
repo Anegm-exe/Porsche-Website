@@ -6,7 +6,6 @@
 body, html {
     position: relative;
     z-index: -1;
-    font-family: 'CF1', Roboto;
 }
 
 /*sleepy made changes*/
@@ -148,136 +147,60 @@ body, html {
 /* Base footer styles */
 .footer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 20px;
-    background: #000;
-    color: gray;
+    padding: 15px;
+    background-color: rgba(0, 0, 0,1);
+    color: snow;
+    backdrop-filter: blur(15px);
+    font-family: 'CF1', Roboto;
 }
 
-.footer-section {
-    flex: 1;
+.row{
+    margin-left: 100px;
 }
 
-.footer-text, .footer-icons {
-    text-align: left;
-}
-
-    .footer-icons .social-media {
-        display: flex;
-        justify-content: center;
-    }
-
-        .footer-icons .social-media a {
-            margin: 0 10px;
-        }
-
-/* Styles for the interactive circle within the footer */
-.footer-future .interactive-circle {
-    position: relative;
-    width: 45px;
-    height: 45px;
-    background-color: rgba(255, 215, 0, 0); /* Initially transparent */
-    border-radius: 50%;
-    transition: all 0.5s ease;
-    display: flex;
+.row h3 {
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    cursor: pointer;
-    z-index: 100;
-    animation: glowingCircle 6s ease-in-out infinite;
-    margin: auto; /* Center the circle in its container */
-}
-
-    .footer-future .interactive-circle:hover {
-        width: 330px; /* Adjust as needed for the footer */
-        height: 225px; /* Adjust as needed for content */
-        border-radius: 10px; /* Adjust if you prefer rounded corners */
-        background-color: rgba(255, 215, 0, 0); /* Slightly opaque or adjust as needed */
-        animation: glowingCircle 6s ease-in-out infinite;
-        margin: auto; /* Maintain the position in the center */
-    }
-
-.footer-future .content {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    color: white;
-    text-align: center;
-    font-size: 22px; /* Adjust as needed */
-}
-
-.footer-future .interactive-circle:hover .content {
-    opacity: 1;
-    transition: opacity 3s ease; /* Slower fade-in for content */
-}
-
-.footer-text h3, .footer-text ul {
-    text-align: center;
-}
-
-.footer-text h3{
     font-size: 50px;
     margin: 0;
 }
 
-.footer-text ul li a {
-    color: grey; /* Default text color */
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
-    font-size: x-large;
+.row ul{
+    justify-content: center;
+    align-content:center;
+    display: flex;
+    flex-direction: column;
 }
 
-    .footer-text ul li a:hover {
-        color: white; /* Text color on hover */
+.row a {
+    color: dimgrey;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-size: 24px;
+    justify-content: center;
+    align-content: center;
+}
+
+    .row a:hover {
+        color: snow;
     }
 
-.footer-text ul {
+.contact-list {
     list-style-type: none; /* Removes bullet points */
     padding-left: 0; /* Removes the default padding on the left, if necessary */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
 }
-
-
-@keyframes glowingCircle {
-    0%, 100% {
-        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 0 0 15px rgba(251, 242, 161, 0.4), 0 0 30px rgba(251, 242, 161, 0.2);
-    }
-
-    50% {
-        box-shadow: 0 0 10px rgba(251, 242, 161, 1), 0 0 20px rgba(251, 242, 161, 0.8), 0 0 40px rgba(251, 242, 161, 0.6);
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 720px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-section {
-        margin-bottom: 20px;
-    }
-
-    .footer-icons .social-media {
-        justify-content: center;
-    }
-
-    .footer-future .interactive-circle, .footer-future .interactive-circle:hover {
-        width: 45px; /* Adjust size for small screens */
-        height: 45px;
-        margin: 0 auto; /* Center circle */
-    }
-
-        .footer-future .interactive-circle:hover .content {
-            opacity: 0; /* Optionally hide content on hover for small screens */
-        }
-}
-
 
 /* social media icons */
 .social-media {
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    margin-left: 40%;
 }
 
     .social-media img {
@@ -294,4 +217,4 @@ body, html {
     50% {
         text-shadow: 0 0 25px rgba(255, 255, 255, 0.75), 0 0 25px rgba(255, 255, 255, 0.75), 0 0 25px rgba(255, 255, 255, 0.75), 0 0 25px rgba(255, 255, 255, 0.75), 0 0 25px rgba(255, 255, 255, 0.75);
     }
-}  
+}
