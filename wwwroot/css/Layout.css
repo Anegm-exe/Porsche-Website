@@ -1,6 +1,12 @@
-﻿body, html {
+﻿@font-face {
+    font-family: 'CF1';
+    src: url('/fonts/Caflisch Script Regular.ttf') format('woff2');
+}
+
+body, html {
     position: relative;
     z-index: -1;
+    font-family: 'CF1', Roboto;
 }
 
 /*sleepy made changes*/
@@ -139,47 +145,135 @@
     color: white;
 }
 
+/* Base footer styles */
 .footer {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 20px 0 ;
-    font-family: sans-serif, Arial;
-    text-align: center;
-    width: 100%;
-    backdrop-filter: blur(50px);
-    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    background: #000;
+    color: gray;
 }
 
-    .footer .row {
-        width: 100%;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        display:flex;
+.footer-section {
+    flex: 1;
+}
+
+.footer-text, .footer-icons {
+    text-align: left;
+}
+
+    .footer-icons .social-media {
+        display: flex;
         justify-content: center;
-        align-content: center;
-        color: gray;
-        font-size: 0.8em;
     }
 
-        .footer .row a {
-            text-decoration: none;
-            color: gray;
-            transition: 0.5s;
+        .footer-icons .social-media a {
+            margin: 0 10px;
         }
 
-            .footer .row a:hover {
-                color: snow;
-            }
+/* Styles for the interactive circle within the footer */
+.footer-future .interactive-circle {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 215, 0, 0); /* Initially transparent */
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 100;
+    animation: glowingCircle 6s ease-in-out infinite;
+    margin: auto; /* Center the circle in its container */
+}
 
-            .footer .row li {
-                display: inline-block;
-                margin: 0px 30px;
-            }
+    .footer-future .interactive-circle:hover {
+        width: 330px; /* Adjust as needed for the footer */
+        height: 225px; /* Adjust as needed for content */
+        border-radius: 10px; /* Adjust if you prefer rounded corners */
+        background-color: rgba(255, 215, 0, 0); /* Slightly opaque or adjust as needed */
+        animation: glowingCircle 6s ease-in-out infinite;
+        margin: auto; /* Maintain the position in the center */
+    }
 
-        .footer .row a i {
-            font-size: 2em;
-            margin: 0% 1%;
+.footer-future .content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    text-align: center;
+    font-size: 22px; /* Adjust as needed */
+}
+
+.footer-future .interactive-circle:hover .content {
+    opacity: 1;
+    transition: opacity 3s ease; /* Slower fade-in for content */
+}
+
+.footer-text h3, .footer-text ul {
+    text-align: center;
+}
+
+.footer-text h3{
+    font-size: 50px;
+    margin: 0;
+}
+
+.footer-text ul li a {
+    color: grey; /* Default text color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+    font-size: x-large;
+}
+
+    .footer-text ul li a:hover {
+        color: white; /* Text color on hover */
+    }
+
+.footer-text ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes the default padding on the left, if necessary */
+}
+
+
+@keyframes glowingCircle {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(251, 242, 161, 0.6), 0 0 15px rgba(251, 242, 161, 0.4), 0 0 30px rgba(251, 242, 161, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(251, 242, 161, 1), 0 0 20px rgba(251, 242, 161, 0.8), 0 0 40px rgba(251, 242, 161, 0.6);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-icons .social-media {
+        justify-content: center;
+    }
+
+    .footer-future .interactive-circle, .footer-future .interactive-circle:hover {
+        width: 45px; /* Adjust size for small screens */
+        height: 45px;
+        margin: 0 auto; /* Center circle */
+    }
+
+        .footer-future .interactive-circle:hover .content {
+            opacity: 0; /* Optionally hide content on hover for small screens */
         }
+}
+
 
 /* social media icons */
 .social-media {
